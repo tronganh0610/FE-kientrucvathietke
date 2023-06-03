@@ -47,12 +47,8 @@ const Login = () => {
         }
     };
 
-    const togglePassword = (e) => {
-        if (showPassword) {
-            setShowPassword(false);
-        } else {
-            setShowPassword(true);
-        }
+    const togglePassword = () => {
+        setShowPassword(!showPassword);
     };
 
     return (
@@ -65,7 +61,7 @@ const Login = () => {
             <div className="col-12 col-md-7 col-lg-6 auth-main-col text-center">
                 <div className="d-flex flex-column align-content-end">
                     <div className="auth-body mx-auto">
-                        <p>Phần mềm quản lý kho</p>
+                        <h1>Phần mềm quản lý kho</h1>
                         <div className="auth-form-container text-start">
                             <form className="auth-form" method="POST" onSubmit={authenticate} autoComplete={"off"}>
                                 <div className="username mb-3">
@@ -105,23 +101,18 @@ const Login = () => {
                                             onChange={(e) => setPassword(e.target.value)}
                                         />
 
-                                        <button
-                                            type="button"
-                                            className="btn btn-sm"
-                                            onClick={(e) => togglePassword(e)}>
+                                        <button type="button" className="btn btn-sm" onClick={(e) => togglePassword(e)}>
                                             <i className={showPassword ? "far fa-eye" : "far fa-eye-slash"}></i>{" "}
                                         </button>
-
-                                        <div
-                                            className={`invalid-feedback text-start ${
-                                                validate.validate && validate.validate.password ? "d-block" : "d-none"
-                                            }`}>
-                                            {validate.validate && validate.validate.password
-                                                ? validate.validate.password[0]
-                                                : ""}
-                                        </div>
                                     </div>
-
+                                    <div
+                                        className={`invalid-feedback text-start ${
+                                            validate.validate && validate.validate.password ? "d-block" : "d-none"
+                                        }`}>
+                                        {validate.validate && validate.validate.password
+                                            ? validate.validate.password[0]
+                                            : ""}
+                                    </div>
                                     <div className="extra mt-3 row justify-content-between">
                                         <div className="col-6">
                                             <div className="form-check">
@@ -151,7 +142,6 @@ const Login = () => {
                                 </div>
                             </form>
 
-                            <hr />
                         </div>
                     </div>
                 </div>
