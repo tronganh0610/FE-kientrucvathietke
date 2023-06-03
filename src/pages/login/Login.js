@@ -65,7 +65,7 @@ const Login = () => {
             <div className="col-12 col-md-7 col-lg-6 auth-main-col text-center">
                 <div className="d-flex flex-column align-content-end">
                     <div className="auth-body mx-auto">
-                        <p>Login to your account</p>
+                        <p>Phần mềm quản lý kho</p>
                         <div className="auth-form-container text-start">
                             <form className="auth-form" method="POST" onSubmit={authenticate} autoComplete={"off"}>
                                 <div className="username mb-3">
@@ -92,7 +92,7 @@ const Login = () => {
                                 </div>
 
                                 <div className="password mb-3">
-                                    <div className="input-group border-1 border ">
+                                    <div className="input-group border-1 border bg-white ">
                                         <input
                                             type={showPassword ? "text" : "password"}
                                             className={`form-control border-0 ${
