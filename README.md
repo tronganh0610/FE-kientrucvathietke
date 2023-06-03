@@ -34,8 +34,7 @@ This will build the app for production.
 
 ![login](https://i.imgur.com/0QKNX05.png)
 
-#### Register Form
-![register](https://i.imgur.com/H8ZJOPj.png)
+
 
 #### Forgot Password Form
 ![forgot](https://i.imgur.com/moZyR37.png)
